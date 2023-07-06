@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSA-Array Merge</title>
+</head>
+<body>
+    <center><h2>Merge Two Arrays </h2></center>
+
+    <script>
+        /*
+            Merge Two Array
+        */
+
+        let arr1 = [2, 5, 15, 8, 10];
+        let arr2 = [8, 90, 7, 6, 0];
+        let arr3 = [];
+
+        document.write("First Array is ["+arr1+"] <br>");
+        document.write("Second Array is ["+arr2+"] <br>");
+         
+        /*
+            Insert first array elements in third array
+        */
+
+        for(let i=0; i<arr1.length; i++){
+             arr3[i] = arr1[i];
+        }
+
+        /*
+           get new array length
+        */
+
+        let arr_length = arr3.length;
+
+        /*
+            Insert second array elements in third array
+        */
+
+        for(let j=0; j<arr2.length; j++){
+             arr3[arr_length + j] = arr2[j];
+        }
+
+        document.write("Third/New Array is ["+arr3+"] <br>");
+
+
+        /*
+            You can also merge two or more array in one line like
+
+            array3 = [...array1, ...array2];
+        */
+    </script>
+</body>
+</html>

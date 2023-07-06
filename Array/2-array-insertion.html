@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSA-Array Insertion</title>
+</head>
+<body>
+    <center><h2> Array Insertion </h2></center>
+    <script>
+        /*
+           Array Insertion - Insert an element in array in particular position
+        */
+
+        let array = [9, 4, 1, 12, 78, 65, 19, 35, 2, 11, 18, 81];
+        let position = 3;
+        let newElement = 199;
+        
+        document.write("Original Array is ["+array+"] <br> <br>");
+
+        for(let i=(array.length - 1); i>=0; i--){
+            
+            /*
+                If, position of i is grater than insertion position, the value will be shifted one place ahed
+            */
+
+            if(i>position){
+                 array[i+1] = array[i];
+             }
+
+             /*
+                If, position of I is equal to position, data will be inserted in array
+             */
+
+            if(i == position){
+                  array[i] = newElement;
+            }
+        }
+
+        document.write("New Array is - [" +array+"] <br>");
+        
+    </script>
+</body>
+</html>

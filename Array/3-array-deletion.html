@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSA-Array Deletion</title>
+</head>
+<body>
+    <center><h2> Array Deletion </h2></center>
+
+    <script>
+        /*
+           Array Deletion - delete an element in array in particular position
+        */
+
+        // taking user input, the position which user want to remove
+
+        let actual_position = prompt("Please enter The aray position you want to remove");
+
+        // defining the array
+        let array = [9, 4, 1, 12, 78, 65, 19, 35, 2, 11, 18, 81];
+
+        // check the array position is not null
+        if(actual_position != null){
+        
+        // check the given position is +ve or -ve
+        if(actual_position >= 0){
+
+        // check the position is grater than array length or not
+        if(actual_position <= (array.length - 1)){
+
+        let position = actual_position;
+        
+        document.write("Original Array is ["+array+"] <br>");
+        document.write("Removed Array element for position "+ actual_position +" is - " +array[actual_position]+" <br>");
+
+        for(var i=0; i<(array.length - 1); i++){
+             if(i < position){
+                array[i] = array[i];
+             }
+
+             if(i == position){
+                array[i] = array[i+1];
+             }
+
+             if(i>position){
+                array[i] = array[i+1];
+             }
+        }
+        
+       array.length = (array.length - 1);
+       document.write("New Array is - [" +array+"] <br>");
+      }
+      else{
+        alert("Your enter position is grater than array length, Actual Array Length is - "+array.length);
+      }
+    }
+      else{
+        alert("please enter a valid position");
+      }
+    }
+      else{
+        alert("please enter a valid position");
+      }
+        
+    </script>
+</body>
+</html>

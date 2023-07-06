@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSA-ARRAY Sorting</title>
+</head>
+<body>
+    <center><h2>Array Sorting</h2></center>
+
+    <script>
+        let arr = [2, 9, 6, 15, 61, 51, 91, 3, 12, 18, 109, 5];
+
+        document.write("Actual Array is ["+arr+"] <br>");
+
+        /*
+            Forward Sorting
+        */
+
+        for(var i=0; i<arr.length; i++){
+            for(var j=0; j<arr.length; j++){
+                 if(arr[j] > arr[j+1]){
+                     let temp = arr[j];
+                     arr[j] = arr[j+1];
+                     arr[j+1] = temp;
+                 }
+            }
+        }
+
+        document.write("Array after Forward Sorting is ["+arr+"] <br>");
+
+         /*
+            Reverse Sorting
+        */
+
+        for(var i=0; i<arr.length; i++){
+            for(var j=0; j<arr.length; j++){
+                 if(arr[j] < arr[j+1]){
+                     let temp = arr[j];
+                     arr[j] = arr[j+1];
+                     arr[j+1] = temp;
+                 }
+            }
+        }
+
+        document.write("Array after Reverse Sorting is ["+arr+"] <br>");
+    </script>
+</body>
+</html>

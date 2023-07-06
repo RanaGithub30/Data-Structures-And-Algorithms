@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSA-Array Search</title>
+</head>
+<body>
+    <center><h2> Array Search </h2></center>
+
+    <script>
+        /*
+           Array Search - delete an element in array in particular position
+        */
+
+        // taking user input, the position which user want to remove
+
+        let actual_position = prompt("Please enter The array position or array element you want to Search for-");
+
+        // defining the array
+        let array = [9, 4, 1, 12, 78, 65, 19, 35, 2, 11, 18, 81];
+
+        // check the array position is not null
+        if(actual_position != null){
+        
+        // check the given position is +ve or -ve
+        if(actual_position >= 0){
+
+        // check the position is grater than array length or not
+        // if user search using array position
+        if(actual_position <= (array.length - 1)){
+
+        let position = actual_position;
+        
+        document.write("Original Array is ["+array+"] <br>");
+        document.write("Searched Element for Array position "+ actual_position +" is - " +array[actual_position]+" <br>");
+
+      }
+      else{
+        // if user search using array value
+
+        for(let i=0; i<(array.length); i++){
+             if(actual_position == (array[i])){
+                document.write("Original Array is ["+array+"] <br>");
+                document.write("Searched Element for Array Value -  "+ actual_position +" is - " +(i)+" <br>");
+                exit;
+             }
+        }
+
+        alert("please enter a valid element");
+      }
+    }
+      else{
+        alert("please enter a valid position");
+      }
+    }
+      else{
+        alert("please enter a valid position");
+      }
+        
+    </script>
+</body>
+</html>
